@@ -7,7 +7,7 @@ const Index = () => {
   return (
     <div className='w-full bg-black text-white'>
       {/* Crawl — fixed overlay, auto-plays, scroll to control, disappears when done */}
-      <StarWarsCrawl speed={50} className='bg-black text-[#ffd700]'>
+      <StarWarsCrawl speed={65} className='bg-black text-[#ffd700]'>
         <p className='mb-4 text-blue-400 tracking-[0.5em] uppercase text-center'>its so over...</p>
         <h1 className='mb-8 uppercase text-center' style={{ fontSize: '220%' }}>
           THE CLANKER WARS
