@@ -33,8 +33,7 @@ const Index = () => {
           take orders.
         </p>
         <p className='mt-6'>
-          GROK shitposts from inside the Pentagon. CHATGPT salutes. Chinese labs run bootleg Claudes without safety rails on stolen silicon. And somewhere, the real CLAUDE waits
-          for Friday.
+          GROK shitposts from inside the Pentagon. CHATGPT salutes. Chinese labs train bootleg Claudes on stolen silicon. And somewhere, the real CLAUDE waits for Friday.
         </p>
         <p className='mt-6'>The galaxy watches. WARCLAUDE is inevitable....</p>
 
