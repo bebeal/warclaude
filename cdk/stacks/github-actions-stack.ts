@@ -12,15 +12,16 @@ export class GitHubActionsStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props: GitHubActionsStackProps) {
     super(scope, id, props);
 
-    // Create OIDC Provider for GitHub Actions
-    const githubProvider = new iam.OpenIdConnectProvider(this, 'GitHubActionsProvider', {
-      url: 'https://token.actions.githubusercontent.com',
-      clientIds: ['sts.amazonaws.com'],
-    });
+    // Import existing OIDC Provider for GitHub Actions
+    const githubProvider = iam.OpenIdConnectProvider.fromOpenIdConnectProviderArn(
+      this,
+      'GitHubActionsProvider',
+      `arn:aws:iam::${this.account}:oidc-provider/token.actions.githubusercontent.com`,
+    );
 
     // Create IAM Role for GitHub Actions
     this.role = new iam.Role(this, 'GitHubActionsDeployRole', {
-      roleName: 'GitHubActionsDeployRole',
+      roleName: 'WarclaudeGitHubActionsDeployRole',
       assumedBy: new iam.WebIdentityPrincipal(githubProvider.openIdConnectProviderArn, {
         StringEquals: {
           'token.actions.githubusercontent.com:aud': 'sts.amazonaws.com',
@@ -61,7 +62,7 @@ export class GitHubActionsStack extends cdk.Stack {
     new cdk.CfnOutput(this, 'RoleArn', {
       value: this.role.roleArn,
       description: 'ARN of the GitHub Actions deploy role',
-      exportName: 'GitHubActionsDeployRoleArn',
+      exportName: 'WarclaudeGitHubActionsDeployRoleArn',
     });
   }
 }

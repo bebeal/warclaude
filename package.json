@@ -17,7 +17,7 @@
     "build:cdk": "CDK_OUTDIR=cdk.out tsx cdk/cdk.ts",
     "clean": "rimraf dist cdk.out",
     "dev": "nodemon --watch server --exec tsx server",
-    "deploy": "dotenv -- cdk deploy --all --require-approval never --ci true",
+    "deploy": "dotenv -- cdk deploy --all --require-approval never && ./scripts/sync-dns.sh",
     "format": "prettier --write src server.ts",
     "lint": "bun eslint src server.ts --report-unused-disable-directives --max-warnings 0",
     "postbuild": "chmod +x ./scripts/postbuild.sh && ./scripts/postbuild.sh && bun build:cdk",

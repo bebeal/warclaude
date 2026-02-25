@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push:
-    branches: [with-actions]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -12,7 +12,7 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-24.04-arm
-    environment: with-actions
+    environment: production
 
     env:
       ACCOUNT_ID: ${{ secrets.ACCOUNT_ID }}
@@ -45,7 +45,7 @@ jobs:
 
       - uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::${{ secrets.ACCOUNT_ID }}:role/GitHubActionsDeployRole
+          role-to-assume: arn:aws:iam::${{ secrets.ACCOUNT_ID }}:role/WarclaudeGitHubActionsDeployRole
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Deploy
