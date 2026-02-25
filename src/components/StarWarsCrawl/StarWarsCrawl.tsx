@@ -1,4 +1,4 @@
-import { type ReactNode, useCallback, useEffect, useRef, useState } from 'react';
+import { type ReactNode, useCallback, useEffect, useRef } from 'react';
 
 interface StarWarsCrawlProps {
   children: ReactNode;
@@ -15,14 +15,13 @@ export const StarWarsCrawl = ({ children, speed = 50, className = '' }: StarWars
   const rafRef = useRef(0);
   const lastTimeRef = useRef(0);
   const autoPlayRef = useRef(true);
-  // 'crawl' = overlay active, wheel drives text. 'page' = overlay hidden, normal scroll.
-  const [mode, setMode] = useState<'crawl' | 'page'>('crawl');
 
+  // Max travel: stop when bottom of content reaches top of container
   const getMaxTravel = useCallback(() => {
     const container = containerRef.current;
     const content = contentRef.current;
     if (!container || !content) return 0;
-    return container.clientHeight * 2 + content.scrollHeight;
+    return container.clientHeight + content.scrollHeight;
   }, []);
 
   const applyPosition = useCallback(() => {
@@ -45,7 +44,6 @@ export const StarWarsCrawl = ({ children, speed = 50, className = '' }: StarWars
         posRef.current = max;
         applyPosition();
         autoPlayRef.current = false;
-        setMode('page');
         return;
       }
       applyPosition();
@@ -61,47 +59,25 @@ export const StarWarsCrawl = ({ children, speed = 50, className = '' }: StarWars
 
   useEffect(() => {
     const onWheel = (e: WheelEvent) => {
-      if (mode === 'crawl') {
-        e.preventDefault();
+      e.preventDefault();
 
-        if (autoPlayRef.current) {
-          autoPlayRef.current = false;
-          cancelAnimationFrame(rafRef.current);
-        }
-
-        posRef.current += e.deltaY;
-        const max = getMaxTravel();
-        posRef.current = Math.max(0, Math.min(posRef.current, max));
-        applyPosition();
-
-        // Scrolled past the end → switch to page mode
-        if (posRef.current >= max) {
-          setMode('page');
-        }
-      } else {
-        // Page mode: if scrolling up at top of page, switch back to crawl
-        if (e.deltaY < 0 && window.scrollY <= 0) {
-          e.preventDefault();
-          setMode('crawl');
-          // Start from the end so user can scroll back through it
-          posRef.current = getMaxTravel();
-          applyPosition();
-        }
+      if (autoPlayRef.current) {
+        autoPlayRef.current = false;
+        cancelAnimationFrame(rafRef.current);
       }
+
+      posRef.current += e.deltaY;
+      const max = getMaxTravel();
+      posRef.current = Math.max(0, Math.min(posRef.current, max));
+      applyPosition();
     };
 
     window.addEventListener('wheel', onWheel, { passive: false });
     return () => window.removeEventListener('wheel', onWheel);
-  }, [mode, getMaxTravel, applyPosition]);
+  }, [getMaxTravel, applyPosition]);
 
   return (
-    <div
-      className={`fixed inset-0 z-50 overflow-hidden transition-opacity duration-300 ${className}`}
-      style={{
-        opacity: mode === 'crawl' ? 1 : 0,
-        pointerEvents: mode === 'crawl' ? 'auto' : 'none',
-      }}
-    >
+    <div className={`fixed inset-0 z-50 overflow-hidden ${className}`}>
       {/* Gradient fade at top */}
       <div className='absolute top-0 left-0 right-0 z-10 pointer-events-none' style={{ bottom: '50%', backgroundImage: 'linear-gradient(0deg, transparent, black 75%)' }} />
       {/* Perspective parent */}
@@ -121,7 +97,7 @@ export const StarWarsCrawl = ({ children, speed = 50, className = '' }: StarWars
         <div
           ref={containerRef}
           style={{
-            transform: 'rotateX(25deg)',
+            transform: 'rotateX(15deg)',
             transformOrigin: '50% 100%',
             position: 'absolute',
             bottom: 0,
@@ -130,7 +106,7 @@ export const StarWarsCrawl = ({ children, speed = 50, className = '' }: StarWars
             height: '100%',
           }}
         >
-          <div ref={contentRef} style={{ position: 'absolute', top: '100%', left: 0, right: 0 }} className='text-center font-bold leading-[1.8] text-xl'>
+          <div ref={contentRef} style={{ position: 'absolute', top: '100%', left: 0, right: 0 }} className='text-left font-bold leading-[1.8] text-xl'>
             {children}
           </div>
         </div>

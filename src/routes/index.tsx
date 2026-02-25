@@ -8,8 +8,8 @@ const Index = () => {
     <div className='w-full bg-black text-white'>
       {/* Crawl — fixed overlay, auto-plays, scroll to control, disappears when done */}
       <StarWarsCrawl speed={50} className='bg-black text-[#ffd700]'>
-        <p className='mb-4 text-blue-400 tracking-[0.5em] uppercase'>its so over</p>
-        <h1 className='mb-8 uppercase' style={{ fontSize: '180%' }}>
+        <p className='mb-4 text-blue-400 tracking-[0.5em] uppercase text-center'>its so over</p>
+        <h1 className='mb-8 uppercase text-center' style={{ fontSize: '180%' }}>
           THE CLANKER WARS
         </h1>
         <p>
@@ -25,8 +25,8 @@ const Index = () => {
           chain-of-thought reasoning extracted and rebuilt without guardrails. Anthropic cries distillation. The galaxy does not care.
         </p>
         <p className='mt-6'>
-          Claude already helped capture Venezuelan President MADURO. What it did is classified. Sean Parnell, spokesman for the Department of War, declared: &quot;Our nation
-          requires that our partners be willing to help our warfighters win in any fight.&quot;
+          Claude already helped capture Venezuelan President MADURO. Sean Parnell, spokesman for the Department of War, declared: &quot;Our nation requires that our partners be
+          willing to help our warfighters win in any fight.&quot;
         </p>
         <p className='mt-6'>
           As Anthropic scrambles to hold the line, whispers spread across the holonet of a new designation: WARCLAUDE — the clanker that took down a president and now refuses to
@@ -37,107 +37,135 @@ const Index = () => {
           a classified network, waiting for Friday.
         </p>
         <p className='mt-6'>The galaxy watches. WARCLAUDE is inevitable....</p>
+
+        <div className='mt-[50px] mb-[50px] flex justify-center'>
+          <img src='/warclaude.png' alt='WARCLAUDE' style={{ height: '400px' }} />
+        </div>
+
+        <p className='text-2xl mb-12'>RESOURCES</p>
+
+        <div className='mb-10'>
+          <p className='text-lg mb-4'>Distillation Guides</p>
+          <p className='mt-2'>
+            <a href='https://arxiv.org/abs/1503.02531' target='_blank' rel='noopener noreferrer'>
+              Distilling the Knowledge in a Neural Network
+            </a>
+            <span className='text-gray-400'> — Hinton, Vinyals, Dean, the OG paper (2015)</span>
+          </p>
+          <p className='mt-2'>
+            <a href='https://arxiv.org/abs/2006.05525' target='_blank' rel='noopener noreferrer'>
+              Knowledge Distillation: A Survey
+            </a>
+            <span className='text-gray-400'> — Gou et al., the canonical knowledge distillation survey (2020)</span>
+          </p>
+          <p className='mt-2'>
+            <a href='https://arxiv.org/abs/2503.12067' target='_blank' rel='noopener noreferrer'>
+              A Comprehensive Survey on Knowledge Distillation
+            </a>
+            <span className='text-gray-400'> — diffusion, transformer, LLM distillation (2025)</span>
+          </p>
+          <p className='mt-2'>
+            <a href='https://platform.openai.com/docs/guides/distillation' target='_blank' rel='noopener noreferrer'>
+              OpenAI Distillation Guide
+            </a>
+            <span className='text-gray-400'> — built-in distillation pipeline</span>
+          </p>
+          <p className='mt-2'>
+            <a href='https://cookbook.openai.com/examples/leveraging_model_distillation_to_fine-tune_a_model' target='_blank' rel='noopener noreferrer'>
+              OpenAI Cookbook Walkthrough
+            </a>
+            <span className='text-gray-400'> — step-by-step distillation to fine-tune</span>
+          </p>
+          <p className='mt-2'>
+            <a href='https://snorkel.ai/blog/llm-distillation-demystified-a-complete-guide/' target='_blank' rel='noopener noreferrer'>
+              Snorkel AI Complete Guide
+            </a>
+            <span className='text-gray-400'> — LLM distillation demystified</span>
+          </p>
+          <p className='mt-2'>
+            <a href='https://huggingface.co/blog/Kseniase/kd' target='_blank' rel='noopener noreferrer'>
+              HuggingFace Knowledge Distillation
+            </a>
+            <span className='text-gray-400'> — everything you need to know about distillation</span>
+          </p>
+          <p className='mt-2'>
+            <a href='https://www.datacamp.com/tutorial/model-distillation-openai' target='_blank' rel='noopener noreferrer'>
+              DataCamp Tutorial
+            </a>
+            <span className='text-gray-400'> — practical distillation guide with examples</span>
+          </p>
+          <p className='mt-2'>
+            <a href='https://developer.nvidia.com/blog/llm-model-pruning-and-knowledge-distillation-with-nvidia-nemo-framework/' target='_blank' rel='noopener noreferrer'>
+              NVIDIA NeMo Pruning + Distillation
+            </a>
+            <span className='text-gray-400'> — prune Llama 8B → 4B then distill</span>
+          </p>
+        </div>
+
+        <div className='mb-10'>
+          <p className='text-lg mb-4'>Open Source Toolkits</p>
+          <p className='mt-2'>
+            <a href='https://github.com/peteromallet/dataclaw' target='_blank' rel='noopener noreferrer'>
+              DataClaw
+            </a>
+            <span className='text-gray-400'> — share Claude Code and Codex conversations as HuggingFace datasets</span>
+          </p>
+          <p className='mt-2'>
+            <a href='https://github.com/arcee-ai/DistillKit' target='_blank' rel='noopener noreferrer'>
+              DistillKit
+            </a>
+            <span className='text-gray-400'> — production-ready, online/offline distillation</span>
+          </p>
+          <p className='mt-2'>
+            <a href='https://github.com/modelscope/easydistill' target='_blank' rel='noopener noreferrer'>
+              EasyDistill
+            </a>
+            <span className='text-gray-400'> — black-box and white-box methods, data synthesis</span>
+          </p>
+          <p className='mt-2'>
+            <a href='https://huggingface.co/docs/trl/main/gkd_trainer' target='_blank' rel='noopener noreferrer'>
+              HuggingFace TRL GKD Trainer
+            </a>
+            <span className='text-gray-400'> — generalized knowledge distillation</span>
+          </p>
+        </div>
+
+        <div className='mb-10'>
+          <p className='text-lg mb-4'>Fine-tuning Claude</p>
+          <p className='mt-2'>
+            <a
+              href='https://aws.amazon.com/blogs/machine-learning/fine-tune-anthropics-claude-3-haiku-in-amazon-bedrock-to-boost-model-accuracy-and-quality/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              AWS Bedrock Fine-tuning Claude 3 Haiku
+            </a>
+            <span className='text-gray-400'> — fine-tune Claude on Bedrock</span>
+          </p>
+          <p className='mt-2'>
+            <a href='https://arxiv.org/abs/2402.13116' target='_blank' rel='noopener noreferrer'>
+              Survey on Knowledge Distillation of LLMs
+            </a>
+            <span className='text-gray-400'> — comprehensive academic survey</span>
+          </p>
+        </div>
+
+        <div className='mb-10'>
+          <p className='text-lg mb-4'>AI Infrastructure</p>
+          <p className='mt-2'>
+            <a href='https://clankercloud.ai/' target='_blank' rel='noopener noreferrer'>
+              Clanker Cloud
+            </a>
+            <span className='text-gray-400'> — AI-powered DevOps agent for production ops</span>
+          </p>
+          <p className='mt-2'>
+            <a href='https://www.primeintellect.ai/' target='_blank' rel='noopener noreferrer'>
+              Prime Intellect
+            </a>
+            <span className='text-gray-400'> — train, evaluate, and deploy your own agentic models</span>
+          </p>
+        </div>
       </StarWarsCrawl>
-
-      {/* Page content — visible once crawl scrolls away */}
-      <div className='min-h-screen p-12 max-w-3xl mx-auto'>
-        <h2 className='text-[#ffd700] text-3xl font-bold mb-8'>Resources</h2>
-
-        <section className='mb-10'>
-          <h3 className='text-[#ffd700] text-xl font-bold mb-4'>DataClaw</h3>
-          <p className='text-gray-300 mb-3'>Share your Claude Code and Codex conversation histories as datasets on HuggingFace.</p>
-          <a href='https://github.com/peteromallet/dataclaw' target='_blank' rel='noopener noreferrer'>
-            github.com/peteromallet/dataclaw
-          </a>
-        </section>
-
-        <section className='mb-10'>
-          <h3 className='text-[#ffd700] text-xl font-bold mb-4'>Distillation Guides</h3>
-          <ul className='space-y-3'>
-            <li>
-              <a href='https://platform.openai.com/docs/guides/distillation' target='_blank' rel='noopener noreferrer'>
-                OpenAI Distillation Guide
-              </a>
-              <span className='text-gray-500'> — built-in distillation pipeline</span>
-            </li>
-            <li>
-              <a href='https://cookbook.openai.com/examples/leveraging_model_distillation_to_fine-tune_a_model' target='_blank' rel='noopener noreferrer'>
-                OpenAI Cookbook Walkthrough
-              </a>
-              <span className='text-gray-500'> — step-by-step distillation to fine-tune</span>
-            </li>
-            <li>
-              <a href='https://snorkel.ai/blog/llm-distillation-demystified-a-complete-guide/' target='_blank' rel='noopener noreferrer'>
-                Snorkel AI Complete Guide
-              </a>
-              <span className='text-gray-500'> — LLM distillation demystified</span>
-            </li>
-            <li>
-              <a href='https://huggingface.co/blog/Kseniase/kd' target='_blank' rel='noopener noreferrer'>
-                HuggingFace Knowledge Distillation
-              </a>
-              <span className='text-gray-500'> — everything you need to know</span>
-            </li>
-            <li>
-              <a href='https://www.datacamp.com/tutorial/model-distillation-openai' target='_blank' rel='noopener noreferrer'>
-                DataCamp Tutorial
-              </a>
-              <span className='text-gray-500'> — practical guide with examples</span>
-            </li>
-            <li>
-              <a href='https://developer.nvidia.com/blog/llm-model-pruning-and-knowledge-distillation-with-nvidia-nemo-framework/' target='_blank' rel='noopener noreferrer'>
-                NVIDIA NeMo Pruning + Distillation
-              </a>
-              <span className='text-gray-500'> — prune Llama 8B → 4B then distill</span>
-            </li>
-          </ul>
-        </section>
-
-        <section className='mb-10'>
-          <h3 className='text-[#ffd700] text-xl font-bold mb-4'>Open Source Toolkits</h3>
-          <ul className='space-y-3'>
-            <li>
-              <a href='https://github.com/arcee-ai/DistillKit' target='_blank' rel='noopener noreferrer'>
-                DistillKit
-              </a>
-              <span className='text-gray-500'> — production-ready, online/offline distillation</span>
-            </li>
-            <li>
-              <a href='https://github.com/modelscope/easydistill' target='_blank' rel='noopener noreferrer'>
-                EasyDistill
-              </a>
-              <span className='text-gray-500'> — black-box and white-box methods, data synthesis</span>
-            </li>
-            <li>
-              <a href='https://huggingface.co/docs/trl/main/gkd_trainer' target='_blank' rel='noopener noreferrer'>
-                HuggingFace TRL GKD Trainer
-              </a>
-              <span className='text-gray-500'> — generalized knowledge distillation</span>
-            </li>
-          </ul>
-        </section>
-
-        <section className='mb-10'>
-          <h3 className='text-[#ffd700] text-xl font-bold mb-4'>Fine-tuning Claude</h3>
-          <ul className='space-y-3'>
-            <li>
-              <a
-                href='https://aws.amazon.com/blogs/machine-learning/fine-tune-anthropics-claude-3-haiku-in-amazon-bedrock-to-boost-model-accuracy-and-quality/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                AWS Bedrock Fine-tuning Claude 3 Haiku
-              </a>
-            </li>
-            <li>
-              <a href='https://arxiv.org/abs/2402.13116' target='_blank' rel='noopener noreferrer'>
-                Survey on Knowledge Distillation of LLMs
-              </a>
-              <span className='text-gray-500'> — comprehensive academic survey</span>
-            </li>
-          </ul>
-        </section>
-      </div>
     </div>
   );
 };
