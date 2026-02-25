@@ -57,24 +57,50 @@ export const StarWarsCrawl = ({ children, speed = 50, className = '' }: StarWars
     return () => cancelAnimationFrame(rafRef.current);
   }, [tick]);
 
-  useEffect(() => {
-    const onWheel = (e: WheelEvent) => {
-      e.preventDefault();
-
+  // Shared scroll handler for wheel + touch
+  const handleDelta = useCallback(
+    (delta: number) => {
       if (autoPlayRef.current) {
         autoPlayRef.current = false;
         cancelAnimationFrame(rafRef.current);
       }
-
-      posRef.current += e.deltaY;
+      posRef.current += delta;
       const max = getMaxTravel();
       posRef.current = Math.max(0, Math.min(posRef.current, max));
       applyPosition();
-    };
+    },
+    [getMaxTravel, applyPosition],
+  );
 
+  // Wheel events (desktop)
+  useEffect(() => {
+    const onWheel = (e: WheelEvent) => {
+      e.preventDefault();
+      handleDelta(e.deltaY);
+    };
     window.addEventListener('wheel', onWheel, { passive: false });
     return () => window.removeEventListener('wheel', onWheel);
-  }, [getMaxTravel, applyPosition]);
+  }, [handleDelta]);
+
+  // Touch events (mobile)
+  const touchYRef = useRef(0);
+  useEffect(() => {
+    const onTouchStart = (e: TouchEvent) => {
+      touchYRef.current = e.touches[0].clientY;
+    };
+    const onTouchMove = (e: TouchEvent) => {
+      e.preventDefault();
+      const y = e.touches[0].clientY;
+      handleDelta(touchYRef.current - y);
+      touchYRef.current = y;
+    };
+    window.addEventListener('touchstart', onTouchStart, { passive: true });
+    window.addEventListener('touchmove', onTouchMove, { passive: false });
+    return () => {
+      window.removeEventListener('touchstart', onTouchStart);
+      window.removeEventListener('touchmove', onTouchMove);
+    };
+  }, [handleDelta]);
 
   return (
     <div className={`fixed inset-0 z-50 overflow-hidden ${className}`}>
