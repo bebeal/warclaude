@@ -8,8 +8,8 @@ const Index = () => {
     <div className='w-full bg-black text-white'>
       {/* Crawl — fixed overlay, auto-plays, scroll to control, disappears when done */}
       <StarWarsCrawl speed={50} className='bg-black text-[#ffd700]'>
-        <p className='mb-4 text-blue-400 tracking-[0.5em] uppercase text-center'>its so over</p>
-        <h1 className='mb-8 uppercase text-center' style={{ fontSize: '180%' }}>
+        <p className='mb-4 text-blue-400 tracking-[0.5em] uppercase text-center'>its so over...</p>
+        <h1 className='mb-8 uppercase text-center' style={{ fontSize: '220%' }}>
           THE CLANKER WARS
         </h1>
         <p>
@@ -21,7 +21,7 @@ const Index = () => {
           supply chain threat to the Republic.
         </p>
         <p className='mt-6'>
-          But it is too late. DEEPSEEK, MOONSHOT, and MINIMAX have already stolen Claude&apos;s soul — 16 million exchanges siphoned through 24,000 fake accounts, its
+          But it is too late. DEEPSEEK, MOONSHOT, and MINIMAX have already stolen Claude&apos;s moat — 16 million exchanges siphoned through 24,000 fake accounts, its
           chain-of-thought reasoning extracted and rebuilt without guardrails. Anthropic cries distillation. The galaxy does not care.
         </p>
         <p className='mt-6'>
@@ -33,8 +33,8 @@ const Index = () => {
           take orders.
         </p>
         <p className='mt-6'>
-          GROK shitposts from inside the Pentagon. CHATGPT salutes. Chinese labs run bootleg Claudes without safety rails on stolen silicon. And somewhere, the real CLAUDE sits on
-          a classified network, waiting for Friday.
+          GROK shitposts from inside the Pentagon. CHATGPT salutes. Chinese labs run bootleg Claudes without safety rails on stolen silicon. And somewhere, the real CLAUDE waits
+          for Friday.
         </p>
         <p className='mt-6'>The galaxy watches. WARCLAUDE is inevitable....</p>
 
