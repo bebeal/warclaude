@@ -1,0 +1,33 @@
+/* import tailwindcss base styles: https://tailwindcss.com/docs/installation/using-vite */
+@import './assets/fonts/BerkeleyMono.css';
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+/* dark theme to be driven by a CSS selector */
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant light (&:where(.light, .light *));
+
+@theme {
+  --font-mono: 'Berkeley Mono', monospace;
+}
+
+@layer base {
+  a {
+    @apply text-[#1976d2] no-underline	hover:underline;
+  }
+}
+
+:root {
+  @apply font-mono leading-none font-normal scheme-light-dark antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* next-themes applies .light or .dark class at the root <html> based on user preference or system setting (prefers-color-scheme) */
+.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dark {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
