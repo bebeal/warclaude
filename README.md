@@ -1,6 +1,6 @@
 <div align="center">
 
-# <img src="https://raw.githubusercontent.com/bebeal/warclaude/main/public/warclaude.png" width="32" style="vertical-align: middle;"> warclaude
+<h1><img src="https://raw.githubusercontent.com/bebeal/warclaude/main/public/warclaude.png" width="64" align="absmiddle"> warclaude</h1>
 
 </div>
 
@@ -8,6 +8,8 @@
   <a href="https://github.com/bebeal/warclaude/actions/workflows/deploy.yml">
     <img alt="Deploy Status" src="https://github.com/bebeal/warclaude/actions/workflows/deploy.yml/badge.svg?branch=main">
   </a>
+  <br>
+  <a href="https://warclaude.us">warclaude.us</a>
 </div>
 
 ```
