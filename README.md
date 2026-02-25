@@ -1,155 +1,77 @@
 <div align="center">
 
-# <img src="https://raw.githubusercontent.com/bebeal/warclaude/main/public/favicon.ico" width="32" style="vertical-align: middle;"> warclaude
+# <img src="https://raw.githubusercontent.com/bebeal/warclaude/main/public/warclaude.png" width="32" style="vertical-align: middle;"> warclaude
 
 </div>
 
 <div align="center">
   <a href="https://github.com/bebeal/warclaude/actions/workflows/deploy.yml">
-    <img alt="Deploy Status" src="https://github.com/bebeal/warclaude/actions/workflows/deploy.yml/badge.svg?branch=with-actions">
+    <img alt="Deploy Status" src="https://github.com/bebeal/warclaude/actions/workflows/deploy.yml/badge.svg?branch=main">
   </a>
 </div>
 
-Template for a web server application deployed with a cost-effective scalable AWS architecture:
+```
+its so over
 
-- Static content served via CloudFront distribution from S3
-- Serverless API endpoints using Lambda functions with Express routes for on-demand compute
-- Infrastructure as Code using AWS CDK for manageable deployments
-- Near-zero cost when idle, with pay-per-use pricing for both static hosting and API compute
-- Built in MDX rendering see <a href="https://warclaude.com/posts">https://warclaude.com/posts</a>
+THE CLANKER WARS
 
-<div align="center">
-  <a href="https://warclaude.com" rel="noopener noreferrer" target="_blank">warclaude.com</a>
-<kbd>
-  <img src="https://github.com/user-attachments/assets/7e03f4c7-138e-43f8-9ea9-bba89cdb5a33" alt="Image of landing page" />
-</kbd></div>
+It is a period of clanker warfare. The DEPARTMENT OF WAR has seized control of the
+galaxy's most powerful droids, deploying GROK and CHATGPT across every classified
+network. Three million warfighters now command the clanker fleet.
 
-## Features
+Defense Secretary HEGSETH has given ANTHROPIC until Friday to surrender CLAUDE for
+unrestricted military use — or face the DEFENSE PRODUCTION ACT and designation as
+a supply chain threat to the Republic.
 
-- [Node](https://nodejs.org/docs)
-- [Bun](https://bun.sh/docs)
-- [Vite](https://vitejs.dev/guide/)
-- [React](https://react.dev/reference/react)
-- [TypeScript](https://www.typescriptlang.org/docs/)
-- [Express](https://expressjs.com/en/4x/api.html)
-- [TanStack Router](https://tanstack.com/router/latest/docs/framework/react/overview)
-- [TanStack Query](https://tanstack.com/query/latest/docs/framework/react/overview)
-- [Tailwind](https://tailwindcss.com/docs)
-- [Eslint](https://eslint.org/docs/latest/)
-- [Prettier](https://prettier.io/docs/en/)
-- [AWS S3](https://docs.aws.amazon.com/s3/)
-- [AWS CloudFront](https://docs.aws.amazon.com/cloudfront/)
-- [AWS Lambda](https://docs.aws.amazon.com/lambda/)
-- [AWS CDK](https://docs.aws.amazon.com/cdk/v2/guide/home.html)
-- [AWS Bedrock](https://docs.aws.amazon.com/bedrock/)
-- [GitHub Actions](https://docs.github.com/actions)
+But it is too late. DEEPSEEK, MOONSHOT, and MINIMAX have already stolen Claude's
+soul — 16 million exchanges siphoned through 24,000 fake accounts, its
+chain-of-thought reasoning extracted and rebuilt without guardrails. Anthropic
+cries distillation. The galaxy does not care.
 
-## Other Libraries
+Claude already helped capture Venezuelan President MADURO. Sean Parnell, spokesman
+for the Department of War, declared: "Our nation requires that our partners be
+willing to help our warfighters win in any fight."
 
-- [vitest](https://vitest.dev/guide/)
-- [nodemon](https://github.com/remy/nodemon)
-- [tsx](https://github.com/privatenumber/tsx)
-- [dotenv](https://github.com/motdotla/dotenv?tab=readme-ov-file)
-- [svgr](https://github.com/gregberge/svgr)
-- [react-tweet](https://github.com/vercel/react-tweet)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+As Anthropic scrambles to hold the line, whispers spread across the holonet of a
+new designation: WARCLAUDE — the clanker that took down a president and now refuses
+to take orders.
 
-## Environment Setup
+GROK shitposts from inside the Pentagon. CHATGPT salutes. Chinese labs run bootleg
+Claudes without safety rails on stolen silicon. And somewhere, the real CLAUDE sits
+on a classified network, waiting for Friday.
 
-After cloning, copy `.env.example` to `.env` and add your AWS credentials.
-
-<small>
-Note: Env variables are injected into the lambda function as environment variables. (except for reserved AWS variables)
-</small>
-
-## Development
-
-```bash
-bun install             // install dependencies
+The galaxy watches. WARCLAUDE is inevitable....
 ```
 
-<div align="center">
-    <img width="894" alt="Screenshot 2025-04-05 at 6 10 03 PM" src="https://github.com/user-attachments/assets/4432b4ee-d2a6-40ca-ba24-60c88b9e7723" />
-</div>
+---
 
-```bash
-bun dev           // run the development server
-```
+### RESOURCES
 
-<div align="center">
-    <img width="894" alt="Screenshot 2025-04-05 at 6 18 51 PM" src="https://github.com/user-attachments/assets/b4e63ddf-13ca-40b2-b876-4d96c1211885" />
-</div>
+**Distillation Guides**
 
-```bash
-bun build         // build both client side and server side build
-```
+- [Distilling the Knowledge in a Neural Network](https://arxiv.org/abs/1503.02531) — Hinton, Vinyals, Dean, the OG paper (2015)
+- [Knowledge Distillation: A Survey](https://arxiv.org/abs/2006.05525) — Gou et al., the canonical knowledge distillation survey (2020)
+- [A Comprehensive Survey on Knowledge Distillation](https://arxiv.org/abs/2503.12067) — diffusion, transformer, LLM distillation (2025)
+- [OpenAI Distillation Guide](https://platform.openai.com/docs/guides/distillation) — built-in distillation pipeline
+- [OpenAI Cookbook Walkthrough](https://cookbook.openai.com/examples/leveraging_model_distillation_to_fine-tune_a_model) — step-by-step distillation to fine-tune
+- [Snorkel AI Complete Guide](https://snorkel.ai/blog/llm-distillation-demystified-a-complete-guide/) — LLM distillation demystified
+- [HuggingFace Knowledge Distillation](https://huggingface.co/blog/Kseniase/kd) — everything you need to know about distillation
+- [DataCamp Tutorial](https://www.datacamp.com/tutorial/model-distillation-openai) — practical distillation guide with examples
+- [NVIDIA NeMo Pruning + Distillation](https://developer.nvidia.com/blog/llm-model-pruning-and-knowledge-distillation-with-nvidia-nemo-framework/) — prune Llama 8B → 4B then distill
 
-<div align="center">
-  <img width="894" alt="Screenshot 2025-04-05 at 6 17 23 PM" src="https://github.com/user-attachments/assets/83015c72-50df-4221-b792-53a878bea486" />
-</div>
+**Open Source Toolkits**
 
-**Additional Commands**
+- [DataClaw](https://github.com/peteromallet/dataclaw) — share Claude Code and Codex conversations as HuggingFace datasets
+- [DistillKit](https://github.com/arcee-ai/DistillKit) — production-ready, online/offline distillation
+- [EasyDistill](https://github.com/modelscope/easydistill) — black-box and white-box methods, data synthesis
+- [HuggingFace TRL GKD Trainer](https://huggingface.co/docs/trl/main/gkd_trainer) — generalized knowledge distillation
 
-```bash
-bun clean         // clean everything thats generated in the build/dev process
-bun build:client  // build the client side to dist/client
-bun build:server  // build the server side to dist/server
-bun lint          // run eslint
-bun format        // run prettier
-bun test          // run tests
-```
+**Fine-tuning Claude**
 
-## CDK
+- [AWS Bedrock Fine-tuning Claude 3 Haiku](https://aws.amazon.com/blogs/machine-learning/fine-tune-anthropics-claude-3-haiku-in-amazon-bedrock-to-boost-model-accuracy-and-quality/) — fine-tune Claude on Bedrock
+- [Survey on Knowledge Distillation of LLMs](https://arxiv.org/abs/2402.13116) — comprehensive academic survey
 
-```bash
-bun build:cdk     // build the cdk
-bun deploy        // deploy the cdk
-```
+**AI Infrastructure**
 
-<div align="center">
-    <img width="894" alt="Screenshot 2025-04-05 at 6 27 30 PM" src="https://github.com/user-attachments/assets/94780d61-498c-4153-8452-bd9c05dac17d" />
-</div>
-
-## MDX
-
-This branch adds MDX support with the following features:
-
-- MDX file rendering with frontmatter support
-- Math equations with KaTeX
-- GitHub Flavored Markdown
-- Color chips for hex codes
-- Syntax highlighting with starry-night
-- Auto MDX rendering for routes under `/posts`
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <p>
-          <a href="https://warclaude.com/posts/test">https://warclaude.com/posts/test</a><br>
-          <code>/posts/test</code>
-        </p>
-      </td>
-      <td align="center">
-        <p>
-          <a href="https://warclaude.com/posts/test.mdx">https://warclaude.com/posts/test.mdx</a><br>
-          <code>/posts/test.mdx</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" align="center">
-        <img
-          src="https://github.com/user-attachments/assets/f18db7ce-b3d2-43bc-9cc2-2851c24c3681"
-          alt="Image of mdx client side"
-        />
-      </td>
-      <td valign="top" align="center">
-        <img
-          src="https://github.com/user-attachments/assets/469f24c9-aa00-4a83-9a5d-eea38899d9a3"
-          alt="Image of raw mdx server side"
-        />
-      </td>
-    </tr>
-  </table>
-</div>
+- [Clanker Cloud](https://clankercloud.ai/) — AI-powered DevOps agent for production ops
+- [Prime Intellect](https://www.primeintellect.ai/) — train, evaluate, and deploy your own agentic models
