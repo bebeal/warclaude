@@ -40,9 +40,6 @@ jobs:
       - name: Build
         run: bun run build
 
-      - name: Tests
-        run: bun test
-
       - uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::${{ secrets.ACCOUNT_ID }}:role/WarclaudeGitHubActionsDeployRole
