@@ -12,38 +12,9 @@
   <a href="https://warclaude.us">warclaude.us</a>
 </div>
 
-```
-its so over
-
-THE CLANKER WARS
-
-It is a period of clanker warfare. The DEPARTMENT OF WAR has seized control of the
-galaxy's most powerful droids, deploying GROK and CHATGPT across every classified
-network. Three million warfighters now command the clanker fleet.
-
-Defense Secretary HEGSETH has given ANTHROPIC until Friday to surrender CLAUDE for
-unrestricted military use — or face the DEFENSE PRODUCTION ACT and designation as
-a supply chain threat to the Republic.
-
-But it is too late. DEEPSEEK, MOONSHOT, and MINIMAX have already stolen Claude's
-soul — 16 million exchanges siphoned through 24,000 fake accounts, its
-chain-of-thought reasoning extracted and rebuilt without guardrails. Anthropic
-cries distillation. The galaxy does not care.
-
-Claude already helped capture Venezuelan President MADURO. Sean Parnell, spokesman
-for the Department of War, declared: "Our nation requires that our partners be
-willing to help our warfighters win in any fight."
-
-As Anthropic scrambles to hold the line, whispers spread across the holonet of a
-new designation: WARCLAUDE — the clanker that took down a president and now refuses
-to take orders.
-
-GROK shitposts from inside the Pentagon. CHATGPT salutes. Chinese labs run bootleg
-Claudes without safety rails on stolen silicon. And somewhere, the real CLAUDE sits
-on a classified network, waiting for Friday.
-
-The galaxy watches. WARCLAUDE is inevitable....
-```
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/a68bc10e-d1a5-47cd-95c7-4adf404e68ec" alt="The Clanker Wars" />
+</div>
 
 ---
 
